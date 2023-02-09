@@ -3,4 +3,9 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {},
   },
+
+  images: {
+    domains:["links.papareact.com"]
+  }
+
 }
