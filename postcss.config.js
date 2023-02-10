@@ -4,8 +4,5 @@ module.exports = {
     autoprefixer: {},
   },
 
-  images: {
-    domains:["links.papareact.com"]
-  }
 
 }
