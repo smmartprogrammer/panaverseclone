@@ -1,12 +1,14 @@
 // import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Header from "../Components/Header";
 import Banner from "../Components/Banner";
 import SmallCards from "../Components/SmallCards";
+import MediumCard from "../Components/MediumCard";
+import LargeCard from "../Components/LargeCard"
 import { type } from "os";
 
-export default function Home({ exploreData }) {
+export default function Home({ exploreData, cardsData }) {
   return (
     <div className="">
       <Head>
@@ -29,7 +31,20 @@ export default function Home({ exploreData }) {
             ))}
           </div>
         </section>
-        <section className="text-4xl font-semibold py-8">Live Anywhere</section>
+        <section>
+          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -mt-3">
+            {cardsData?.map(({ img, title }) => (
+              <MediumCard key={img} img={img} title={img} />
+            ))}
+          </div>
+        </section>
+        <LargeCard 
+        img="https://links.papareact.com/4cj"
+        title="The Greatest Outdoors"
+        description="wishlists curated by Airbnb."
+        buttonText="Get Inspired"
+        />
       </main>
     </div>
   );
@@ -37,19 +52,25 @@ export default function Home({ exploreData }) {
 
 // type exploreData= any
 
+// type exploreData= {
+// img?: any;
+//   distance: "string";
+//   location: "string";
+// }
+
 async function getStaticProps() {
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
     (res) => res.json()
   );
 
-  const cardsData = await fetch("https://links.papareact.com/zp1").then(
-    (res) => res.json()
+  const cardsData = await fetch("https://links.papareact.com/zp1").then((res) =>
+    res.json()
   );
 
-
-  return   {
+  return {
     props: {
       exploreData,
+      cardsData,
     },
   };
 }
