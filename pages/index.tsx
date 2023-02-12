@@ -31,6 +31,9 @@ export default function Home({ exploreData }) {
           </div>
           
         </section>
+        <section className="text-4xl">
+Live Anywhere
+        </section>
       </main>
     </div>
   );
