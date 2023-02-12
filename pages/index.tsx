@@ -41,7 +41,13 @@ async function getStaticProps() {
   const exploreData = await fetch("https://links.papareact.com/pyp").then(
     (res) => res.json()
   );
-  return {
+
+  const cardsData = await fetch("https://links.papareact.com/zp1").then(
+    (res) => res.json()
+  );
+
+
+  return   {
     props: {
       exploreData,
     },
