@@ -56,13 +56,19 @@ function Header() {
         </div>
       </div>
       {searchInput && (
-        <div>
+        <div className="flex flex-col col-span-3 mx-auto">
           <DateRangePicker
             ranges={[selectionRanges]}
             minDate={new Date()}
             rangeColors={["#fd5861"]}
             onChange={handleSelect}
           />
+          <div className="flex items-center border-b
+           mb-4">
+            <h2 className="text-2xl flex-grow font-semibold">Number of Guests</h2>
+          <UsersIcon className="h-5" />
+          <input type="number" className="w-12 pl-2 text-lg outline-none text-red-400" />
+          </div>
         </div>
       )}
     </header>
