@@ -9,7 +9,7 @@ import LargeCard from "../Components/LargeCard";
 import Footer from "../Components/Footer";
 import { type } from "os";
 
-export default function Home({ exploreData, cardsData }) {
+export default function Home({ exploreData, cardsData }){
   return (
     <div className="">
       <Head>
