@@ -3,9 +3,14 @@ import { useRouter } from "next/router";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import {format} from "date-fns"
+import type { NextApiRequest, NextApiResponse } from 'next'
 
-function Search() {
+
+function Search({ searchResults }) {
   const router = useRouter();
+
+console.log(searchResults);
+
 
   const { location, startDate, endDate, noOfGuests } = router.query;
 
@@ -17,7 +22,7 @@ function Search() {
 
   return (
     <div>
-      <Header />
+      <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
           <p className="text-xs">300+ Stays for {noOfGuests} number of guests</p>
@@ -37,3 +42,17 @@ function Search() {
 }
 
 export default Search;
+
+type Data = {
+  name: string
+}
+
+export async function getServerSideProps() {
+ const searchResults = await fetch("https://links.papareact.com/isz").then(res => res.json()) 
+
+return {
+  props: {
+    searchResults,
+  }
+}
+}
