@@ -3,7 +3,9 @@ import { useRouter } from "next/router";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import {format} from "date-fns"
+import InfoCards from "../Components/InfoCards"
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { title } from "process";
 
 
 function Search({ searchResults }) {
@@ -34,6 +36,20 @@ console.log(searchResults);
             <p className="button">Rooms and Beds</p>
             <p className="button">More Filters</p>
           </div>
+          {searchResults.map({img,location, title, description, star, price, total })  => 
+            ( 
+              <InfoCards
+              key={img}
+              img={img}
+              location={location}
+              title={title}
+              description={description}
+              star={star}
+              price={price}
+              total={total}
+              
+              />
+            ))}
         </section>
       </main>
       <Footer />
