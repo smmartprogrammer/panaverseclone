@@ -6,22 +6,25 @@ import {
   UsersIcon,
   SearchIcon,
 } from "@heroicons/react/solid";
+import logo1 from "/public/logo1.png";
+import logo2 from "/public/logo2.png";
+import logo3 from "/public/logo3.png";
+
 import { use, useState } from "react";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/router";
 
-function Header({placeholder}) {
+function Header({ placeholder }) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [noOfGuest, setNoOfGuest] = useState(1);
   const router = useRouter();
 
-ranges : Date
+  ranges: Date;
   const handleSelect = (range) => {
-
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
   };
@@ -36,8 +39,8 @@ ranges : Date
       query: {
         location: searchInput,
         startDate: startDate.toISOString(),
-        endDate:endDate.toISOString(),
-        noOfGuest
+        endDate: endDate.toISOString(),
+        noOfGuest,
       },
     });
   };
@@ -55,7 +58,7 @@ ranges : Date
         className="relative flex items-center h-10 cursor-pointer my-auto"
       >
         <Image
-          src="https://links.papareact.com/qd3"
+          src={logo3}
           layout="fill"
           objectFit="contain"
           objectPosition="left"
@@ -72,7 +75,7 @@ ranges : Date
         <SearchIcon className="hidden md:inline-flex   h-8 bg-red-400 text-white p-2 rounded-full cursor-pointer md:mx-2 " />
       </div>
       <div className="flex items-center justify-end text-gray-500 space-x-4 ">
-        <p className="hidden md:inline cursor-pointer">Become a host</p>
+        <p className="hidden md:inline cursor-pointer">Courses</p>
         <GlobeAltIcon className="h-6 cursor-pointer" />
         <div className="flex items-center space-x-2 border-2 p-2 rounded-full justify-end">
           <MenuIcon className="h-6" />

@@ -6,38 +6,38 @@ function Footer() {
 
       <div className="space-y-4 text-xs text-gray-800">
         <h5 className="font-bold">About</h5>
-        <p>How Airbnb Works</p>
+        <p>Panaverse</p>
         <p>Newsroom</p>
-        <p>Investors</p>
-        <p>Airbnb Plus</p>
-        <p>Airbnb Luke</p>
+        <p>Stackholder</p>
+        <p>Latest Courses</p>
+        <p>Faculties</p>
       </div>
 
       <div className="space-y-4 text-xs text-gray-800">
-        <h5 className="font-bold">Community</h5>
-        <p>Accessibility</p>
-        <p>This is not a real site</p>
-        <p>Its a preety awesome clone</p>
-        <p>Referral Accepted</p>
-        <p>Papafm</p>
+        <h5 className="font-bold">Programs</h5>
+        <p>Web 3.0 and Metaverse Developer</p>
+        <p>Artificial Intelligence</p>
+        <p>Cloud Native Computing</p>
+        <p>Ambient Computing and IoT</p>
+        <p>Network Programmability and Automation</p>
       </div>
 
       <div className="space-y-4 text-xs text-gray-800">
-        <h5 className="font-bold">Host</h5>
-        <p>Papa React</p>
-        <p>Present</p>
-        <p>Zero to full stack hero</p>
-        <p>Hundreds of students</p>
-        <p>Join</p>
+        <h5 className="font-bold">Semester</h5>
+        <p>Quater 1</p>
+        <p>Quater 2</p>
+        <p>Quater 3</p>
+        <p>Quater 4</p>
+        <p>Quater 5</p>
       </div>
 
       <div className="space-y-4 text-xs text-gray-800">
-        <h5 className="font-bold">Raghunathji</h5>
-        <p>Practicing UI</p>
-        <p>Nextjs</p>
-        <p>typescript</p>
-        <p>tailwind</p>
-        <p>github</p>
+        <h5 className="font-bold">Panaverse Dao</h5>
+        <p>NextJs</p>
+        <p>Tailwind Css</p>
+        <p>Github</p>
+        <p>Vercel</p>
+        <p>Dao</p>
       </div>
 
     </div>
